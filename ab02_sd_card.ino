@@ -3,6 +3,22 @@
 
 #include "SD.h"
 #include "SPI.h"
+
+/*
+Cubecell ModulePlus use SD card module connect
+SD_CS  = GPIO4
+SD_MOSI1= GPIO1
+SD_MISO1= GPIO2
+SD_SCK1 = GPIO3
+SD_VCC need connect 5v ( if you use 3.3v module you could just connect to VDD)
+SD_GND = GND
+
+Although Cubecell ModulePlus has 2 SPI interface, but SD library only support "SPI" and could not change.
+
+It means the SPI interface still need to share with LORA function.
+You have initial Lora and SD card each time you use it and better end the spi interface with SPI.end() each time you close those function .
+*/
+
 #define SD_CS_PIN GPIO4
 #define SD_SCK_PIN SCK1
 #define SD_MISO_PIN MISO1
