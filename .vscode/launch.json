@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/living/code/github/ab02_sd_card",
+      "program": "/Users/living/code/github/ab02_sd_card/build/Debug/outDebug"
+    }
+  ]
+}
